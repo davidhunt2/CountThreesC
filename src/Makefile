@@ -16,7 +16,7 @@ TARGET_DIR = /home/david/cs178/CountThreesC/build
 test : $(PROGRAM_NAME)
 	mkdir $(TARGET_DIR); \
 	cp $(DATA_DIR)/$(DATA_NAME) $(TARGET_DIR)/.; \
-	cp $(PROGRAM_NAME) $(TARGET_DIR)/.; \
+	mv $(PROGRAM_NAME) $(TARGET_DIR)/.; \
         cd $(TARGET_DIR); \
 	./$(PROGRAM_NAME)
 
@@ -28,7 +28,7 @@ $(PROGRAM_NAME) : $(PROGRAM_NAME).o $(READ_NAME).o
 $(PROGRAM_NAME).o : $(PROGRAM_NAME).c
 	gcc -g -c $(PROGRAM_NAME).c -o $(PROGRAM_NAME).o
 
-# Compiles read source files into rea object file	
+# Compiles read source files into rea object file
 $(READ_NAME).o : $(READ_NAME).c $(READ_NAME).h
 	gcc -g -c $(READ_NAME).c -o $(READ_NAME).o
 
