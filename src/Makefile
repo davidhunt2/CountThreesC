@@ -13,7 +13,7 @@ DATA_DIR = /home/david/cs178/CountThreesC/data
 TARGET_DIR = /home/david/cs178/CountThreesC/build
 
 # test target that creates build directory with data and exec files and runs exec
-test : $(PROGRAM_NAME)
+run : $(PROGRAM_NAME)
 	mkdir $(TARGET_DIR); \
 	cp $(DATA_DIR)/$(DATA_NAME) $(TARGET_DIR)/.; \
 	mv $(PROGRAM_NAME) $(TARGET_DIR)/.; \
